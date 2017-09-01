@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Company Name</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <link rel="stylesheet" type="text/css" href="static/assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="static/assets/css/keen-dashboards.css" />
+  <link href="static/assets/css/c3.css" rel="stylesheet" type="text/css">
+</head>
+<body class="application">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="static/assets/js/c3.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/c3.js') }}"></script>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="navbar-brand" href="./">Company Name</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            <h1>Throughput Time in Days</h1>
+          </div>
+          <div class="chart-stage">
+            <div id="throughput"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            <h1> Overall Lead Time </h1>
+          </div>
+          <div class="chart-stage">
+            <div id="lead_time"></div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            <h1>Reprint Rate Success %</h1>
+          </div>
+          <div class="chart-stage">
+            <div id="reprint_rate"></div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+  <script type="text/javascript" src="static/assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="static/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="static/assets/lib/holderjs/holder.js"></script>
+  <script>
+    Holder.add_theme("white", { background:"#fff", foreground:"#a7a7a7", size:10 });
+  </script>
+
+  <script type="text/javascript" src="static/assets/lib/keen-js/dist/keen.min.js"></script>
+  <script type="text/javascript" src="static/assets/js/meta.js"></script>
+
+</body>
+</html>
+
+

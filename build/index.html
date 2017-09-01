@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Dashboard</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <link rel="stylesheet" type="text/css" href="static/assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="static/assets/css/keen-dashboards.css" />
+  <link href="static/assets/css/c3.css" rel="stylesheet" type="text/css">
+</head>
+<body class="application">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="static/assets/js/c3.min.js"></script>
+<script type="text/javascript" src="/static/assets/js/c3.js"></script>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="navbar-brand" href="./">Data Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-5">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            <h1>Device Location</h1>
+          </div>
+            <div id="map" style="width:100%; height:400px;"></div>
+        </div>
+      </div>
+
+
+      <div class="col-md-7">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+
+            <h1> Data of last 1 hour </h1>
+          
+          </div>
+          <table border=1 cellpadding=7 width="100%">
+            <tr>
+                <th>Time</th>
+                <th>PM1</th>
+                <th>PM2</th>
+                <th>PM10</th>
+                <th>NO2</th>
+                <th>CO</th>
+                <th>CO2</th>
+                <th>Humidity</th>
+                <th>Temp</th>
+            </tr>
+            
+            <tr>
+                <td>12:00</td>
+                <td>54.00</td>
+                <td>80.00</td>
+                <td>80.00</td>
+                <td>0.01</td>
+                <td>36.83</td>
+                <td>20.67</td>
+                <td>30.94</td>
+                <td>66.5</td>
+            </tr>
+            
+            <tr>
+                <td>12:03</td>
+                <td>41.00</td>
+                <td>92.00</td>
+                <td>102.00</td>
+                <td>0.02</td>
+                <td>66.06</td>
+                <td>54.92</td>
+                <td>30.94</td>
+                <td>66.25</td>
+            </tr>
+            
+            <tr>
+                <td>12:06</td>
+                <td>40.00</td>
+                <td>88.00</td>
+                <td>106.00</td>
+                <td>0.02</td>
+                <td>37.27</td>
+                <td>13.71</td>
+                <td>31.41</td>
+                <td>64.19</td>
+            </tr>
+            
+            <tr>
+                <td>12:09</td>
+                <td>40.00</td>
+                <td>83.00</td>
+                <td>96.00</td>
+                <td>0.02</td>
+                <td>33.47</td>
+                <td>6.70</td>
+                <td>31.66</td>
+                <td>63.19</td>
+            </tr>
+            
+            <tr>
+                <td>12:12</td>
+                <td>38.00</td>
+                <td>77.00</td>
+                <td>87.00</td>
+                <td>0.03</td>
+                <td>32.20</td>
+                <td>4.62</td>
+                <td>31.91</td>
+                <td>62.94</td>
+            </tr>
+            
+            <tr>
+                <td>12:15</td>
+                <td>40.00</td>
+                <td>76.00</td>
+                <td>84.00</td>
+                <td>0.03</td>
+                <td>31.31</td>
+                <td>3.39</td>
+                <td>32.13</td>
+                <td>62.13</td>
+            </tr>
+            
+            <tr>
+                <td>12:18</td>
+                <td>39.00</td>
+                <td>73.00</td>
+                <td>88.00</td>
+                <td>0.03</td>
+                <td>31.14</td>
+                <td>2.93</td>
+                <td>32.25</td>
+                <td>62.13</td>
+            </tr>
+            
+            <tr>
+                <td>12:21</td>
+                <td>41.00</td>
+                <td>78.00</td>
+                <td>92.00</td>
+                <td>0.03</td>
+                <td>32.20</td>
+                <td>2.51</td>
+                <td>32.41</td>
+                <td>61.38</td>
+            </tr>
+            
+            <tr>
+                <td>12:24</td>
+                <td>34.00</td>
+                <td>74.00</td>
+                <td>85.00</td>
+                <td>0.03</td>
+                <td>31.67</td>
+                <td>2.32</td>
+                <td>32.50</td>
+                <td>61.13</td>
+            </tr>
+            
+            <tr>
+                <td>12:27</td>
+                <td>37.00</td>
+                <td>71.00</td>
+                <td>77.00</td>
+                <td>0.04</td>
+                <td>30.27</td>
+                <td>2.23</td>
+                <td>32.63</td>
+                <td>61.25</td>
+            </tr>
+            
+            <tr>
+                <td>12:30</td>
+                <td>40.00</td>
+                <td>76.00</td>
+                <td>89.00</td>
+                <td>0.04</td>
+                <td>31.67</td>
+                <td>2.23</td>
+                <td>32.72</td>
+                <td>61.06</td>
+            </tr>
+            
+            <tr>
+                <td>12:33</td>
+                <td>37.00</td>
+                <td>82.00</td>
+                <td>97.00</td>
+                <td>0.04</td>
+                <td>30.62</td>
+                <td>2.14</td>
+                <td>32.81</td>
+                <td>60.44</td>
+            </tr>
+            
+            <tr>
+                <td>12:36</td>
+                <td>40.00</td>
+                <td>80.00</td>
+                <td>93.00</td>
+                <td>0.04</td>
+                <td>30.27</td>
+                <td>2.05</td>
+                <td>32.91</td>
+                <td>60.25</td>
+            </tr>
+            
+            <tr>
+                <td>12:39</td>
+                <td>39.00</td>
+                <td>79.00</td>
+                <td>91.00</td>
+                <td>0.04</td>
+                <td>31.31</td>
+                <td>2.05</td>
+                <td>32.91</td>
+                <td>60.06</td>
+            </tr>
+            
+            <tr>
+                <td>12:42</td>
+                <td>37.00</td>
+                <td>84.00</td>
+                <td>104.00</td>
+                <td>0.04</td>
+                <td>31.67</td>
+                <td>1.97</td>
+                <td>32.97</td>
+                <td>60.06</td>
+            </tr>
+            
+            <tr>
+                <td>12:45</td>
+                <td>44.00</td>
+                <td>98.00</td>
+                <td>106.00</td>
+                <td>0.05</td>
+                <td>30.27</td>
+                <td>2.05</td>
+                <td>33.59</td>
+                <td>75.00</td>
+            </tr>
+            
+            <tr>
+                <td>12:48</td>
+                <td>41.00</td>
+                <td>85.00</td>
+                <td>96.00</td>
+                <td>0.06</td>
+                <td>31.58</td>
+                <td>1.98</td>
+                <td>33.85</td>
+                <td>63.55</td>
+            </tr>
+            
+            <tr>
+                <td>12:51</td>
+                <td>40.00</td>
+                <td>80.00</td>
+                <td>93.00</td>
+                <td>0.04</td>
+                <td>30.27</td>
+                <td>2.05</td>
+                <td>32.91</td>
+                <td>60.25</td>
+            </tr>
+            
+            <tr>
+                <td>12:54</td>
+                <td>34.00</td>
+                <td>74.00</td>
+                <td>85.00</td>
+                <td>0.03</td>
+                <td>31.67</td>
+                <td>2.32</td>
+                <td>32.50</td>
+                <td>61.13</td>
+            </tr>
+            
+            <tr>
+                <td>12:57</td>
+                <td>41.00</td>
+                <td>92.00</td>
+                <td>102.00</td>
+                <td>0.02</td>
+                <td>66.06</td>
+                <td>54.92</td>
+                <td>30.94</td>
+                <td>66.25</td>
+            </tr>
+            
+            <tr>
+                <td>13:00</td>
+                <td>40.00</td>
+                <td>80.00</td>
+                <td>93.00</td>
+                <td>0.04</td>
+                <td>30.27</td>
+                <td>2.05</td>
+                <td>32.91</td>
+                <td>60.25</td>
+            </tr>
+            
+        </table>
+          
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            <h1>Graph of Data</h1>
+          </div>
+          <div class="chart-stage">
+            <div id="reprint_rate"></div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+  <script type="text/javascript" src="/static/assets/js/map.js"> </script>
+
+  <script type="text/javascript" src="static/assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="static/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="static/assets/lib/holderjs/holder.js"></script>
+  <script>
+    Holder.add_theme("white", { background:"#fff", foreground:"#a7a7a7", size:10 });
+  </script>
+
+  <script type="text/javascript" src="static/assets/lib/keen-js/dist/keen.min.js"></script>
+  <script type="text/javascript" src="static/assets/js/meta.js"></script>
+
+</body>
+</html>
+
