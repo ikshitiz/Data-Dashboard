@@ -1,8 +1,11 @@
+
+var link = 'https://dashboardiot.herokuapp.com/'
 var locations = [
-                ['Durgapur', 23.5204, 87.3119,0, 'http://127.0.0.1:5000/durgapur'],
-                ['Fuljhore', 23.5361,  87.3395,0, 'http://127.0.0.1:5000/'],
-                ['Asansol',  23.6739,  86.9524,0, 'http://127.0.0.1:5000/asansol']
+                ['Durgapur', 23.5204, 87.3119,0, link+'durgapur'],
+                ['Fuljhore', 23.5361,  87.3395,0, link],
+                ['Asansol',  23.6739,  86.9524,0, link+'asansol']
             ];
+
 
             var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 9,
