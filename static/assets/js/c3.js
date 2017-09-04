@@ -1,5 +1,5 @@
 var chart = c3.generate({
-    bindto: '#reprint_rate',
+    bindto: '#graph',
     data: {
         x: 'Time',
         url: '/static/assets/data/asansol.csv',
