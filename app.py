@@ -8,8 +8,7 @@ app = Flask(__name__)
 Bootstrap(app)
 
 def get_csv(st):
-    csv_path = st
-    csv_file = open(csv_path, 'r')
+    csv_file = open(st, 'r')
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
     return csv_list
