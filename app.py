@@ -16,7 +16,7 @@ def get_csv(st):
 @app.route("/", methods = ['GET', 'POST'])
 def index1():
     template = 'index.html'
-    object_list = get_csv('./static/assets/data/asansol.csv')
+    object_list = get_csv('./static/assets/data/1.csv')
     return render_template(template, object_list=object_list)
 
 
@@ -30,7 +30,7 @@ def index2():
 @app.route("/durgapur", methods = ['GET', 'POST'])
 def index3():
     template = 'index.html'
-    object_list = get_csv('./static/assets/data/asansol.csv')
+    object_list = get_csv('./static/assets/data/2.csv')
     return render_template(template, object_list=object_list)
 
 
