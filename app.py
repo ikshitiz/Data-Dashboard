@@ -17,13 +17,13 @@ def get_csv(st):
 
 @app.route("/", methods = ['GET', 'POST'])
 def index1():
-    object_list = get_csv('./static/assets/data/fuljhore.csv')
+    object_list = get_csv('./static/assets/data/asansol.csv')
     return render_template(template, object_list=object_list)
 
 
-@app.route("/asansol", methods = ['GET', 'POST'])
+@app.route("/fuljhore", methods = ['GET', 'POST'])
 def index2():
-    object_list = get_csv('./static/assets/data/asansol.csv')
+    object_list = get_csv('./static/assets/data/fuljhore.csv')
     return render_template(template, object_list=object_list)
 
 
