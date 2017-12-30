@@ -2,8 +2,8 @@
 //var link = 'https://dashboardiot.herokuapp.com/'
 var locations = [
                 ['Durgapur', 23.5204, 87.3119,0, '/durgapur'],
-                ['Fuljhore', 23.5361,  87.3395,0, '/'],
-                ['Asansol',  23.6739,  86.9524,0, '/asansol']
+                ['Fuljhore', 23.5361,  87.3395,0, '/fuljhore'],
+                ['Asansol',  23.6739,  86.9524,0, '/']
             ];
 
 
