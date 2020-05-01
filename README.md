@@ -3,7 +3,8 @@
 A data visualization web app using Python, Flask, Bootstrap, JavaScript, HTML/CSS and C3.JS for a charting library. 
 
 ## Requirements
-- Python 2.7
+- Python 
+
 ## Stack
 - [Flask](http://flask.pocoo.org/) A python microframeworks
 - [Bootstrap](http://getbootstrap.com/) For responsive css layout
