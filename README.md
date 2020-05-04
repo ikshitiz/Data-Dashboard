@@ -22,7 +22,7 @@ $ cd DataD
 $ virtualenv venv
 $ source venv/bin/activate
 ```
-```
+
 Run the app:
 ```
 $ python app.py
